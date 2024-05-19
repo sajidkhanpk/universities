@@ -1,0 +1,13 @@
+.Container {
+  height: 100svh;
+  max-width: 120rem;
+  margin-inline: auto;
+  padding: 2rem 0;
+
+  display: grid;
+  place-items: center;
+
+  @media screen and (max-width: 90rem) {
+    padding: 2rem;
+  }
+}

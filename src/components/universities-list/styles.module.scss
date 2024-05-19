@@ -1,0 +1,112 @@
+.List {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+.ListItem {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  border-radius: 0.8rem;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: rgba(136, 165, 191, 0.48) 0.6rem 0.2rem 1.6rem 0rem,
+    rgba(255, 255, 255, 0.8) -0.6rem -0.2rem 1.6rem 0rem;
+  max-height: 8rem;
+  transition: scale 0.3s, max-height 0.3s;
+
+  &:hover {
+    scale: 1.02;
+    box-shadow: rgba(136, 165, 191, 0.48) 0.8rem 0.2rem 2rem 0rem,
+      rgba(255, 255, 255, 0.8) -0.8rem -0.2rem 2rem 0rem;
+  }
+
+  animation: fadeIn 1s;
+}
+
+.DeletingListItem {
+  max-height: 0;
+  overflow: hidden;
+}
+
+.HeadingBox {
+  position: relative;
+  flex: 1;
+}
+
+.UniversityName {
+  padding: 2rem 1.4rem;
+  font-size: 2.4rem;
+  font-weight: 400;
+
+  @media screen and (max-width: 70rem) {
+    font-size: 1.6rem;
+  }
+}
+
+.DeleteBtn {
+  font-family: "EB Garamond", serif;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1.4rem;
+  color: hsl(0, 98%, 55%);
+  background-color: transparent;
+  cursor: pointer;
+
+  transition: background-color 0.3s;
+}
+
+.DeleteBtn {
+  svg {
+    width: 2rem;
+    height: 2rem;
+    transition: width 0.3s, height, 0.3s;
+  }
+}
+
+.ActiveDeleteBtn {
+  color: #fff;
+  border-radius: 0;
+  background-color: rgb(1, 154, 1);
+  flex: 1;
+  padding: 0;
+}
+
+.CancelDeleteBtn {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  cursor: pointer;
+
+  background-color: red;
+  color: #fff;
+}
+
+.ActiveDeleteBtn,
+.CancelDeleteBtn {
+  svg {
+    width: 2.4rem;
+    height: 2.4rem;
+  }
+  @media screen and (max-width: 70rem) {
+    svg {
+      width: 1.8rem;
+      height: 1.8rem;
+    }
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

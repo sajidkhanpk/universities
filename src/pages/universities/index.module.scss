@@ -1,0 +1,43 @@
+.Container {
+  max-width: 120rem;
+  margin-inline: auto;
+  padding: 2rem 0;
+
+  @media screen and (max-width: 90rem) {
+    padding: 2rem;
+  }
+}
+
+.Heading {
+  font-size: 4rem;
+  font-weight: 400;
+  margin-bottom: 1.6rem;
+}
+
+.FilterBox {
+  margin-bottom: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+
+  input {
+    outline: 1px solid rgb(159, 158, 158);
+  }
+
+  input,
+  select {
+    font-family: "EB Garamond", serif;
+    padding: 0.8rem 1.4rem;
+    font-size: 1.6rem;
+    border-radius: 0.4rem;
+  }
+
+  @media screen and (max-width: 70rem) {
+    gap: 1rem;
+    input,
+    select {
+      flex: 1;
+    }
+  }
+}
